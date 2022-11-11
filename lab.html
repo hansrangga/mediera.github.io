@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mediera</title>
+
+        <!-- Custom Style CSS-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Fontawesom CSS-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Font Nunito CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    </head>
+    <body id="top-page">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+                <!-- Brand -->
+                <a href="" class="sidebar-brand d-flex align-items-center justify-content-center">
+                    <div class="sidebar-brand-icon">
+                        <img src="" width="50px">
+                    </div>
+                    <div class="sidebar-brand-text m-3">Mediera</div>
+                </a>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider my-0">
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span> Dashboard</span>
+                    </a>
+                </li>
+
+                <!-- Pasien -->
+                <li class="nav-item">
+                    <a href="pasien.html" class="nav-link">
+                        <i class="fas fa-user-edit"></i>
+                        <span> Pasien</span>
+                    </a>
+                </li>
+
+                <!-- Lab -->
+                <li class="nav-item active">
+                    <a href="lab.html" class="nav-link">
+                        <i class="fas fa-flask"></i>
+                        <span> Lab</span>
+                    </a>
+                </li>
+
+                <!-- Obat -->
+                <li class="nav-item">
+                    <a href="obat.html" class="nav-link">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        <span> Obat</span>
+                    </a>
+                </li>
+
+                <!-- Rekam Medis -->
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-file-medical"></i>
+                        <span> Rekam Medis</span>
+                    </a>
+                </li>
+
+                <!-- Laporan -->
+                <li class="nav-item">
+                    <a href="" class="nav-link ">
+                        <i class="fas fa-file-signature"></i>
+                        <span> Laporan</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content -->
+            <div class="d-flex flex-column" id="content-wrapper">
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                        <button class="btn btn-link mr-3" id="sidebarToggleTop">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <!-- User Information -->
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown no-arrow">
+                                <a href="" class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Bidan</span>
+                                    <img src="" alt="" class="img-profile rounded-circle" width="60px">
+                                </a>
+
+                                <!-- Dropdown User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a href="" class="dropdown-item">
+                                        <i class="bi bi-gear-fill"></i>
+                                        Settings
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="" class="dropdown-item">
+                                        <i class="bi bi-box-arrow-left"></i>
+                                        Logout
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <div class="container-fluid" id="contentPage">
+
+                        <!-- Heading -->
+
+                        <!-- Input Data and Table Data -->
+                        <div class="row mt-4">
+                            
+                            <!-- Input Data -->
+                            <div class="col-xl-5 col-lg-5">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Input Data Lab</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="" class="user" method="post">
+                                            <div class="form-group">
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="namalab" class="col-sm-2 col-form-label">Nama Lab:</label>
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                        <input type="text" class="form-control" name="namalab" placeholder="Nama Pemeriksaan Lab">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="harga" class="col-sm-2 col-form-label">Harga:</label>
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                        <input type="text" class="form-control" name="harga" placeholder="Harga">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mt-4 justify-content-center">
+                                                <div class="col-sm-2">
+                                                    <a href="" class="btn btn-danger btn-block">
+                                                        Clear
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <a href="" class="btn btn-success btn-block">
+                                                        Submit
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Table Data -->
+                            <div class="col-xl-7 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header d-sm-flex align-items-center justify-content-between py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Data Lab</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Nama Lab</th>
+                                                        <th>Harga</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>01</td>
+                                                        <td>Gula Darah 2 PP</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>02</td>
+                                                        <td>Gula Darah Sewaktu</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>03</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>04</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>07</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Asam Urat</td>
+                                                        <td>Rp 15.000</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-circle btn-primary">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-sm btn-circle btn-warning">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- JQuery JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts -->
+        <script src="js/script.js"></script>
+
+        <!-- DataTables plugins JavaScript -->
+        <script src="vendor/datatables/jquery.dataTables.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+        <script src="js/demo/datatables-demo.js"></script>
+    </body>
+</html>
