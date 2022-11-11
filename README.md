@@ -1,5 +1,4 @@
 # Mediera
-<<<<<<< HEAD
 Web Application Management Klinik
 =======
 Mediara is a web application devoted to clinics. This application can help the clinic's performance in daily operations.
