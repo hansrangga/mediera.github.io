@@ -10354,6 +10354,10 @@ form.user .btn-user {
           animation-timing-function: opacity cubic-bezier(0, 1, 0.4, 1);
 }
 
+.right-side-style {
+  margin-left: 350px;
+}
+
 /* Error Components */
 .error {
   color: #5a5c69;
