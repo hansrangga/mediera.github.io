@@ -8,11 +8,20 @@ With the presence of this application, midwives who work in clinics become more 
 ***
 
 ## To-Do List
-- Create Rekam Medis Page
-- Create Laporan Page
+**First Step**
+- Create Rekam Medis Page :heavy_check_mark:
+- Create Laporan Page :heavy_check_mark:
+- Create Login Page :heavy_check_mark:
+- Create Forgot Password Page 
+
+**Second Step**
 - Create Setting Page
-- Create Login Page
-- Create Forgot Password Page
+- Create Tambah Rekam Medis Page :heavy_check_mark: :new:
+- Create Tagihan Page :new:
+- Create Lihat Rekam Medis Page :new:
+- Create Modal & Pop-Up Delete :new:
+
+**Final Step**
 - Convert to Laravel
 - Testing Apps
 - Debugging Apps
