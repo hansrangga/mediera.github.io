@@ -259,67 +259,85 @@
                             <div class="col-lg-7">
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Input Rekam Medis</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Rekam Medis Pasien</h6>
                                     </div>
                                     <div class="card-body">
                                         <form action="" class="user" method="post">
                                             <div class="form-group">
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="pemeriksa" class="col-sm-2 col-form-label">Pemeriksa:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <input type="text" class="form-control" name="pemeriksa" placeholder="Dokter Pemeriksa">
+                                                    <label for="tgltrans" class="col-sm-4 col-form-label">Tanggal Periksa:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="tgltrans" class="col-sm-5 col-form-label">12 Oktober 2022</label>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="umur" class="col-sm-2 col-form-label">Anamnesis:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <textarea class="form-control" name="anamnesis" rows="3" placeholder="Amamnesis"></textarea>
+                                                    <label for="pemeriksa" class="col-sm-4 col-form-label">Pemeriksa:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="pemeriksa" class="col-sm-8 col-form-label">Bd. Hj. Siti Maryam S,ST., M.Kes</label>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="pfisik" class="col-sm-2 col-form-label">Pemeriksaan Fisik:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
-                                                        <textarea class="form-control" name="pfisik" rows="3" placeholder="Pemeriksaan Fisik"></textarea>
+                                                    <label for="gejala" class="col-sm-4 col-form-label">Gejala:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="gejala" class="col-sm-8 col-form-label">
+                                                            <li>Demam</li>
+                                                            <li>Pilek</li>
+                                                        </label>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="plab" class="col-sm-2 col-form-label">Pemeriksaan Lab:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <select class="form-select col-sm-10 mb-3 mb-sm-0" id="plab">
-                                                            <option value="guldar2" selected>Gula Darah 2 PP</option>
-                                                            <option value="guldar">Gula Darah Sewaktu</option>
-                                                            <option value="asrat">Asam Urat</option>
-                                                        </select>
+                                                    <label for="anamnesis" class="col-sm-4 col-form-label">Anamnesis:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="gejala" class="col-sm-8 col-form-label">Demam selama 10 hari</label>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="diagnosis" class="col-sm-2 col-form-label">Diagnosis:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
-                                                        <input type="text" class="form-control" name="diagnosis" placeholder="Diagnosis">
+                                                    <label for="pfisik" class="col-sm-4 col-form-label">Pemeriksaan Fisik:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="pfisik" class="col-sm-8 col-form-label">Suhu 38.7 C</label>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="resep" class="col-sm-2 col-form-label">Resep:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <select class="form-select col-sm-7 mb-3 mb-sm-0" id="resep">
-                                                            <option value="sirup" selected>Sirup</option>
-                                                            <option value="tablet">Tablet</option>
-                                                            <option value="kapsul">Kapsul</option>
-                                                        </select>
+                                                    <label for="plab" class="col-sm-4 col-form-label">Pemeriksaan Lab:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="plab" class="col-sm-8 col-form-label">
+                                                            <li>Asam Urat: 10mg/dl</li>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="diagnosis" class="col-sm-4 col-form-label">Diagnosis:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="diagnosis" class="col-sm-8 col-form-label">Febris</label>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="resep" class="col-sm-4 col-form-label">Resep:</label>
+                                                    <div class="col-sm-8 mb-3 mb-sm-0">
+                                                        <label for="resep" class="col-sm-8 col-form-label">
+                                                            <li>Amoxicillin Tablet 500 mg : 3x1</li>
+                                                            <li>Metronidazole Tablet 500 mg : 3x1</li>
+                                                        </label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-4 justify-content-center">
-                                                <div class="col-sm-4">
-                                                    <a href="lihat-rm.html" class="btn btn-info btn-block">
-                                                        <i class="fas fa-save"></i>
-                                                        Simpan
+                                                <div class="col-sm-3">
+                                                    <a href="" class="btn btn-danger btn-block">
+                                                        <i class="fas fa-trash"></i>
+                                                        Delete
                                                     </a>
                                                 </div>
-                                                <div class="col-sm-4">
-                                                    <a href="tagihan.html" class="btn btn-success btn-block">
-                                                        <i class="fas fa-shopping-cart"></i>
-                                                        Simpan & Buat Tagihan
+                                                <div class="col-sm-3">
+                                                    <a href="tambah-rm.html" class="btn btn-warning btn-block">
+                                                        <i class="fas fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <a href="" class="btn btn-primary btn-block">
+                                                        <i class="fas fa-print"></i>
+                                                        Print
                                                     </a>
                                                 </div>
                                             </div>

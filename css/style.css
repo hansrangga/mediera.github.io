@@ -9901,6 +9901,11 @@ a:focus {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* Tagihan Components */
+.letter-to {
+  margin-top: 0.15rem;
+}
+
 /* Background Components */
 .bg-gradient-primary {
   background-color: #4e73df;
