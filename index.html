@@ -42,26 +42,24 @@
 
                 <!-- Pasien -->
                 <li class="nav-item">
-                    <a href="pasien.html" class="nav-link">
-                        <i class="fas fa-user-edit"></i>
+                    <a href="#pasienMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-user"></i>
                         <span> Pasien</span>
                     </a>
-                </li>
-
-                <!-- Lab -->
-                <li class="nav-item">
-                    <a href="lab.html" class="nav-link">
-                        <i class="fas fa-flask"></i>
-                        <span> Lab</span>
-                    </a>
-                </li>
-
-                <!-- Obat -->
-                <li class="nav-item">
-                    <a href="obat" class="nav-link">
-                        <i class="fas fa-prescription-bottle-alt"></i>
-                        <span> Obat</span>
-                    </a>
+                    <ul class="collapse list-unstyled" id="pasienMenu">
+                        <li>
+                            <a href="#" class="collapse-item nav-link">
+                                <i class="fas fa-user-edit"></i>
+                                <span> Pendaftaran Pasien</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span> Daftar Pasien</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <!-- Rekam Medis -->
@@ -72,11 +70,19 @@
                     </a>
                 </li>
 
-                <!-- Laporan -->
+                <!-- Lab -->
                 <li class="nav-item">
-                    <a href="laporan.html" class="nav-link ">
-                        <i class="fas fa-file-signature"></i>
-                        <span> Laporan</span>
+                    <a href="lab.html" class="nav-link">
+                        <i class="fas fa-flask"></i>
+                        <span>Tindakan Lab</span>
+                    </a>
+                </li>
+
+                <!-- Obat -->
+                <li class="nav-item">
+                    <a href="obat" class="nav-link">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        <span> Obat</span>
                     </a>
                 </li>
             </ul>

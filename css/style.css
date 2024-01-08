@@ -266,7 +266,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+  --webkit-appearance: button;
 }
 
 button:not(:disabled),
@@ -320,12 +320,14 @@ progress {
 
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  opacity: 1;
   height: auto;
 }
 
 [type=search] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  --webkit-appearance: none;
 }
 
 [type=search]::-webkit-search-decoration {
@@ -3283,8 +3285,8 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+  --webkit-print-color-adjust: exact;
+  --color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -10323,14 +10325,6 @@ form.user .btn-user {
     transform: scale(1);
     opacity: 1;
   }
-}
-.animated--grow-in, .sidebar .nav-item .collapse {
-  -webkit-animation-name: growIn;
-          animation-name: growIn;
-  -webkit-animation-duration: 200ms;
-          animation-duration: 200ms;
-  -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
-          animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
 }
 
 @-webkit-keyframes fadeIn {

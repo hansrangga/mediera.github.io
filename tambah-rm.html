@@ -42,26 +42,24 @@
 
                 <!-- Pasien -->
                 <li class="nav-item">
-                    <a href="pasien.html" class="nav-link">
-                        <i class="fas fa-user-edit"></i>
+                    <a href="#pasienMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-user"></i>
                         <span> Pasien</span>
                     </a>
-                </li>
-
-                <!-- Lab -->
-                <li class="nav-item">
-                    <a href="lab.html" class="nav-link">
-                        <i class="fas fa-flask"></i>
-                        <span> Lab</span>
-                    </a>
-                </li>
-
-                <!-- Obat -->
-                <li class="nav-item">
-                    <a href="obat.html" class="nav-link">
-                        <i class="fas fa-prescription-bottle-alt"></i>
-                        <span> Obat</span>
-                    </a>
+                    <ul class="collapse list-unstyled" id="pasienMenu">
+                        <li>
+                            <a href="#" class="collapse-item nav-link">
+                                <i class="fas fa-user-edit"></i>
+                                <span> Pendaftaran Pasien</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span> Daftar Pasien</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <!-- Rekam Medis -->
@@ -72,11 +70,19 @@
                     </a>
                 </li>
 
-                <!-- Laporan -->
+                <!-- Lab -->
                 <li class="nav-item">
-                    <a href="laporan.html" class="nav-link ">
-                        <i class="fas fa-file-signature"></i>
-                        <span> Laporan</span>
+                    <a href="lab.html" class="nav-link">
+                        <i class="fas fa-flask"></i>
+                        <span>Tindakan Lab</span>
+                    </a>
+                </li>
+
+                <!-- Obat -->
+                <li class="nav-item">
+                    <a href="obat" class="nav-link">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        <span> Obat</span>
                     </a>
                 </li>
             </ul>
@@ -220,33 +226,21 @@
                                         <form action="" class="user" method="post">
                                             <div class="form-group">
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="namalengkap" class="col-sm-2 col-form-label">Nama:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
+                                                    <label for="namalengkap" class="col-sm-3 col-form-label">Nama:</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
                                                         <input type="text" class="form-control" name="namalengkap" placeholder="Dian Pratiwi" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="umur" class="col-sm-2 col-form-label">Umur:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
+                                                    <label for="umur" class="col-sm-3 col-form-label">Umur:</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
                                                         <input type="text" class="form-control" name="umur" placeholder="22" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="alamat" class="col-sm-2 col-form-label">Alamat:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
-                                                        <input type="text" class="form-control" name="alamat" placeholder="Jl.Ibrahim RT04/RW04" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 ml-2 row">
-                                                    <label for="telpnumber" class="col-sm-2 col-form-label">Nomor Hp:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
-                                                        <input type="text" class="form-control" name="telpnumber" placeholder="081245346231" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 ml-2 row">
-                                                    <label for="gejala" class="col-sm-2 col-form-label">Gejala:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
-                                                        <textarea class="form-control" name="gejala" rows="3" placeholder="Demam dan Pilek" readonly></textarea>
+                                                    <label for="jenisKelamin" class="col-sm-3 col-form-label">Jenis Kelamin:</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                                        <input type="text" class="form-control" name="jenisKelamin" placeholder="Laki-Laki" readonly>
                                                     </div>
                                                 </div>
                                             </div>
@@ -265,61 +259,67 @@
                                         <form action="" class="user" method="post">
                                             <div class="form-group">
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="pemeriksa" class="col-sm-2 col-form-label">Pemeriksa:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <input type="text" class="form-control" name="pemeriksa" placeholder="Dokter Pemeriksa">
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 ml-2 row">
-                                                    <label for="umur" class="col-sm-2 col-form-label">Anamnesis:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <textarea class="form-control" name="anamnesis" rows="3" placeholder="Amamnesis"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 ml-2 row">
-                                                    <label for="pfisik" class="col-sm-2 col-form-label">Pemeriksaan Fisik:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
-                                                        <textarea class="form-control" name="pfisik" rows="3" placeholder="Pemeriksaan Fisik"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 ml-2 row">
-                                                    <label for="plab" class="col-sm-2 col-form-label">Pemeriksaan Lab:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <select class="form-select col-sm-10 mb-3 mb-sm-0" id="plab">
-                                                            <option value="guldar2" selected>Gula Darah 2 PP</option>
-                                                            <option value="guldar">Gula Darah Sewaktu</option>
-                                                            <option value="asrat">Asam Urat</option>
+                                                    <label for="pemeriksa" class="col-sm-3 col-form-label">Dokter Pemeriksa</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                                        <select class="form-control col-sm-12 mb-3 mb-sm-0" id="pemeriksa">
+                                                            <option value="#" selected>Bidan Hj.Siti Maryam</option>
+                                                            <option value="#">Dr. Muhammad Ifan Fadhil</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="diagnosis" class="col-sm-2 col-form-label">Diagnosis:</label>
-                                                    <div class="col-sm-10 mb-3 mb-sm-0">
+                                                    <label for="gejala" class="col-sm-3 col-form-label">Gejala</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                                        <textarea class="form-control" name="gejala" rows="3" placeholder="Gejala"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="umur" class="col-sm-3 col-form-label">Anamnesis</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                                        <textarea class="form-control" name="anamnesis" rows="3" placeholder="Amamnesis"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="pfisik" class="col-sm-3 col-form-label">Pemeriksaan Fisik</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                                        <textarea class="form-control" name="pfisik" rows="3" placeholder="Pemeriksaan Fisik"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="diagnosis" class="col-sm-3 col-form-label">Diagnosis</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
                                                         <input type="text" class="form-control" name="diagnosis" placeholder="Diagnosis">
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="resep" class="col-sm-2 col-form-label">Resep:</label>
-                                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <select class="form-select col-sm-7 mb-3 mb-sm-0" id="resep">
+                                                    <label for="plab" class="col-sm-3 col-form-label">Pemeriksaan Lab</label>
+                                                    <div class="col-sm-9 mt-1 mb-2 mb-sm-0">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                            <label class="form-check-label" for="inlineRadio1">Diperlukan</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">Tidak Perlu</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="mb-3 ml-2 row">
+                                                    <label for="resep" class="col-sm-3 col-form-label">Resep</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                                        <select class="form-control col-sm-12 mb-3 mb-sm-0" id="resep">
                                                             <option value="sirup" selected>Sirup</option>
                                                             <option value="tablet">Tablet</option>
                                                             <option value="kapsul">Kapsul</option>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group row mt-4 justify-content-center">
                                                 <div class="col-sm-4">
-                                                    <a href="lihat-rm.html" class="btn btn-info btn-block">
-                                                        <i class="fas fa-save"></i>
-                                                        Simpan
-                                                    </a>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <a href="tagihan.html" class="btn btn-success btn-block">
-                                                        <i class="fas fa-shopping-cart"></i>
-                                                        Simpan & Buat Tagihan
+                                                    <a href="tagihan.html" class="btn btn-primary btn-block">
+                                                        <i class="fas fa-flask"></i>
+                                                        Lanjut Tindakan Lab
                                                     </a>
                                                 </div>
                                             </div>

@@ -25,9 +25,6 @@
 			}
 
 			if ( ! $ || ! $.fn.dataTable ) {
-				// Require DataTables, which attaches to jQuery, including
-				// jQuery if needed and have a $ property so we can access the
-				// jQuery object that is used
 				$ = require('datatables.net')(root, $).$;
 			}
 
@@ -156,15 +153,9 @@ DataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, bu
 		}
 	};
 
-	// IE9 throws an 'unknown error' if document.activeElement is used
-	// inside an iframe or frame. 
 	var activeEl;
 
 	try {
-		// Because this approach is destroying and recreating the paging
-		// elements, focus is lost on the select button which is bad for
-		// accessibility. So we want to restore focus once the draw has
-		// completed
 		activeEl = $(host).find(document.activeElement).data('dt-idx');
 	}
 	catch (e) {}
