@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mediera</title>
+
+    <!-- Custom Style CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontawesom CSS-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Font Nunito CSS -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+</head>
+
+<body id="top-page">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-sidebar-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Brand -->
+            <a href="" class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-icon">
+                    <img src="img/logo-bidan.png" width="50px">
+                </div>
+                <div class="sidebar-brand-text m-3">Mediera</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Dashboard -->
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span> Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Pasien -->
+            <li class="nav-item">
+                <a href="#pasienMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                    <span> Pasien</span>
+                </a>
+                <ul class="collapse list-unstyled" id="pasienMenu">
+                    <li>
+                        <a href="pendaftaran-pasien.html" class="collapse-item nav-link">
+                            <i class="fas fa-user-edit"></i>
+                            <span> Pendaftaran Pasien</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="daftar-pasien.html" class="nav-link">
+                            <i class="fas fa-address-book"></i>
+                            <span> Daftar Pasien</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Rekam Medis -->
+            <li class="nav-item">
+                <a href="rekammedis.html" class="nav-link">
+                    <i class="fas fa-file-medical"></i>
+                    <span> Rekam Medis</span>
+                </a>
+            </li>
+
+            <!-- Lab -->
+            <li class="nav-item active">
+                <a href="lab.html" class="nav-link">
+                    <i class="fas fa-flask"></i>
+                    <span> Tindakan Lab</span>
+                </a>
+            </li>
+
+            <!-- Obat -->
+            <li class="nav-item">
+                <a href="#obatMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                    <i class="fas fa-prescription-bottle-alt"></i>
+                    <span> Obat</span>
+                </a>
+                <ul class="collapse list-unstyled" id="obatMenu">
+                    <li>
+                        <a href="tambah-obat.html" class="collapse-item nav-link">
+                            <i class="fas fa-user-edit"></i>
+                            <span> Tambah Obat</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="daftar-obat.html" class="nav-link">
+                            <i class="fas fa-address-book"></i>
+                            <span> Daftar Obat</span>
+                        </a>
+                    </li><li>
+                        <a href="obat.html" class="nav-link">
+                            <i class="fas fa-address-book"></i>
+                            <span> Single Page Obat</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content -->
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button class="btn btn-link mr-3 btn-sidebar" id="sidebarToggleTop">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <!-- User Information -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a href="" class="nav-link dropdown-toggle" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Bidan</span>
+                                <img src="img/profile.svg" alt="" class="img-profile rounded-circle" width="60px">
+                            </a>
+
+                            <!-- Dropdown User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a href="" class="dropdown-item">
+                                    <i class="bi bi-gear-fill"></i>
+                                    Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="" class="dropdown-item">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+
+                <div class="container-fluid" id="contentPage">
+
+                    <!-- List Pasien -->
+                    <div class="card shadow mb-4 ml-0">
+                        <a href="#pilihPasien" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="pilihPasien">
+                            <h6 class="m-0 font-weight-bold text-primary">Pilih Pasien</h6>
+                        </a>
+                        <div class="collapse" id="pilihPasien">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped" id="dataTable" width="100%"
+                                        cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th width="120px">No.Pasien</th>
+                                                <th>Nama Pasien</th>
+                                                <th>Nomor Hp</th>
+                                                <th width="120px">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Dian Pratiwi</td>
+                                                <td>081245346231</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                        <span class="text">Pilih</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Jajang Rukmana Sukarna</td>
+                                                <td>081222412124</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                        <span class="text">Pilih</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Abdul Saleh Hamaludin</td>
+                                                <td>081345672568</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                        <span class="text">Pilih</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04</td>
+                                                <td>Via Khaerunisa</td>
+                                                <td>08178545269</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                        <span class="text">Pilih</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>05</td>
+                                                <td>Gilang Romadhon</td>
+                                                <td>08154831589</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                        <span class="text">Pilih</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <!-- List Table Data -->
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Identitas Pasien</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="" class="user" method="post">
+                                        <div class="form-group">
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="namalengkap" class="col-sm-3 col-form-label">Nama</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="namalengkap"
+                                                        placeholder="Dian Pratiwi" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="umur" class="col-sm-3 col-form-label">Umur</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="umur" placeholder="22"
+                                                        readonly>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="jenisKelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="jenisKelamin"
+                                                        placeholder="Laki-Laki" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                                                <!-- List Table Data -->
+                                                <div class="col-xl-5 col-lg-5">
+                                                    <div class="card shadow mb-4">
+                                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                                            <h6 class="m-0 font-weight-bold text-primary">Identitas Pasien</h6>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <form action="" class="user" method="post">
+                                                                <div class="form-group">
+                                                                    <div class="mb-3 ml-2 row">
+                                                                        <label for="namalengkap" class="col-sm-3 col-form-label">Nama</label>
+                                                                        <div class="col-sm-9 mb-3 mb-sm-0">
+                                                                            <input type="text" class="form-control" name="namalengkap" placeholder="Dian Pratiwi"
+                                                                                readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mb-3 ml-2 row">
+                                                                        <label for="umur" class="col-sm-3 col-form-label">Umur</label>
+                                                                        <div class="col-sm-9 mb-3 mb-sm-0">
+                                                                            <input type="text" class="form-control" name="umur" placeholder="22" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mb-3 ml-2 row">
+                                                                        <label for="jenisKelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                                                                        <div class="col-sm-9 mb-3 mb-sm-0">
+                                                                            <input type="text" class="form-control" name="jenisKelamin" placeholder="Laki-Laki"
+                                                                                readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                        <!-- Tambah Rekam Medis -->
+                        <div class="col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Input Tindakan Lab</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="" class="user" method="post">
+                                        <div class="form-group">
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="pemeriksa" class="col-sm-3 col-form-label">Dokter Pemeriksa</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <select class="form-control col-sm-12 mb-3 mb-sm-0" id="pemeriksa">
+                                                        <option value="#" selected>Bidan Hj.Siti Maryam</option>
+                                                        <option value="#">Dr. Muhammad Ifan Fadhil</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="gejala" class="col-sm-3 col-form-label">Gejala</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <textarea class="form-control" name="gejala" rows="3"
+                                                        placeholder="Gejala"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="umur" class="col-sm-3 col-form-label">Anamnesis</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <textarea class="form-control" name="anamnesis" rows="3"
+                                                        placeholder="Amamnesis"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="pfisik" class="col-sm-3 col-form-label">Pemeriksaan Fisik</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <textarea class="form-control" name="pfisik" rows="3"
+                                                        placeholder="Pemeriksaan Fisik"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="diagnosis" class="col-sm-3 col-form-label">Diagnosis</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis"
+                                                        placeholder="Diagnosis">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="plab" class="col-sm-3 col-form-label">Pemeriksaan Lab</label>
+                                                <div class="col-sm-9 mt-1 mb-2 mb-sm-0">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label"
+                                                            for="inlineRadio1">Diperlukan</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Tidak Perlu</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="mb-3 ml-2 row">
+                                                    <label for="resep" class="col-sm-3 col-form-label">Resep</label>
+                                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                                        <select class="form-control col-sm-12 mb-3 mb-sm-0" id="resep">
+                                                            <option value="sirup" selected>Sirup</option>
+                                                            <option value="tablet">Tablet</option>
+                                                            <option value="kapsul">Kapsul</option>
+                                                        </select>
+                                                    </div>
+                                                </div> -->
+                                        </div>
+                                        <div class="form-group row mt-4 justify-content-center">
+                                            <div class="col-sm-4">
+                                                <a href="tagihan.html" class="btn btn-success btn-block">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                    Buat Tagihan
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JQuery JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="js/script.js"></script>
+
+    <!-- DataTables plugins JavaScript -->
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+</body>
+
+</html>

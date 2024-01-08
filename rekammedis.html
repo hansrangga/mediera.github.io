@@ -20,7 +20,7 @@
 
             <!-- Sidebar -->
             <ul class="navbar-nav bg-sidebar-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
+            
                 <!-- Brand -->
                 <a href="" class="sidebar-brand d-flex align-items-center justify-content-center">
                     <div class="sidebar-brand-icon">
@@ -28,10 +28,10 @@
                     </div>
                     <div class="sidebar-brand-text m-3">Mediera</div>
                 </a>
-
+            
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
-
+            
                 <!-- Dashboard -->
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">
@@ -39,31 +39,29 @@
                         <span> Dashboard</span>
                     </a>
                 </li>
-
+            
                 <!-- Pasien -->
                 <li class="nav-item">
-                    <a href="pasien.html" class="nav-link">
-                        <i class="fas fa-user-edit"></i>
+                    <a href="#pasienMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-user"></i>
                         <span> Pasien</span>
                     </a>
+                    <ul class="collapse list-unstyled" id="pasienMenu">
+                        <li>
+                            <a href="pendaftaran-pasien.html" class="collapse-item nav-link">
+                                <i class="fas fa-user-edit"></i>
+                                <span> Pendaftaran Pasien</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="daftar-pasien.html" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span> Daftar Pasien</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-
-                <!-- Lab -->
-                <li class="nav-item">
-                    <a href="lab.html" class="nav-link">
-                        <i class="fas fa-flask"></i>
-                        <span> Lab</span>
-                    </a>
-                </li>
-
-                <!-- Obat -->
-                <li class="nav-item">
-                    <a href="obat.html" class="nav-link">
-                        <i class="fas fa-prescription-bottle-alt"></i>
-                        <span> Obat</span>
-                    </a>
-                </li>
-
+            
                 <!-- Rekam Medis -->
                 <li class="nav-item active">
                     <a href="rekammedis.html" class="nav-link">
@@ -71,13 +69,41 @@
                         <span> Rekam Medis</span>
                     </a>
                 </li>
-
-                <!-- Laporan -->
+            
+                <!-- Lab -->
                 <li class="nav-item">
-                    <a href="laporan.html" class="nav-link ">
-                        <i class="fas fa-file-signature"></i>
-                        <span> Laporan</span>
+                    <a href="lab.html" class="nav-link">
+                        <i class="fas fa-flask"></i>
+                        <span> Tindakan Lab</span>
                     </a>
+                </li>
+            
+                <!-- Obat -->
+                <li class="nav-item">
+                    <a href="#obatMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        <span> Obat</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="obatMenu">
+                        <li>
+                            <a href="tambah-obat.html" class="collapse-item nav-link">
+                                <i class="fas fa-user-edit"></i>
+                                <span> Tambah Obat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="daftar-obat.html" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span> Daftar Obat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="obat.html" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span> Single Page Obat</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <!-- End of Sidebar -->
