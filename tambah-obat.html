@@ -75,12 +75,12 @@
             </li>
         
             <!-- Lab -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="lab.html" class="nav-link">
                     <i class="fas fa-flask"></i>
                     <span> Tindakan Lab</span>
                 </a>
-            </li>
+            </li> -->
         
             <!-- Obat -->
             <li class="nav-item">
@@ -180,6 +180,12 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3 ml-2 row">
+                                                <label for="dosisObat" class="col-sm-2 col-form-label">Dosis Obat</label>
+                                                <div class="col-sm-2 mb-3 mb-sm-0 input-group">
+                                                    <input type="number" class="form-control" name="dosisObat" placeholder="0">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
                                                 <label for="jenisObat" class="col-sm-2 col-form-label">Jenis Obat</label>
                                                 <div class="col-sm-10 mt-1 mb-2 mb-sm-0">
                                                     <div class="form-check form-check-inline">
@@ -196,7 +202,19 @@
                                                     </div>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio2">Puyer</label>
+                                                        <label class="form-check-label" for="inlineRadio2">Salep/Krim/Gel</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Injeksi/Suntikan</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Tetes Mata/Telinga/Hidung</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Bubuk/Puyer</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -205,7 +223,7 @@
                                                 <div class="col-sm-10 mt-1 mb-2 mb-sm-0">
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                        <label class="form-check-label" for="inlineRadio1">gr</label>
+                                                        <label class="form-check-label" for="inlineRadio1">g</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
@@ -213,12 +231,41 @@
                                                     </div>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio2">mcg</label>
+                                                        <label class="form-check-label" for="inlineRadio2">ml</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio2">mg/5ml</label>
+                                                        <label class="form-check-label" for="inlineRadio2">µg</label>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="kategoriObat" class="col-sm-2 col-form-label">Kategori Obat</label>
+                                                <div class="col-sm-10 mb-2 mb-sm-0">
+                                                        <select class="form-control col-sm-12 mb-3 mb-sm-0" id="kategoriObat">
+                                                            <option selected>Kategori Obat</option>
+                                                            <option value="sirup">Analgesik</option>
+                                                            <option value="tablet">Antipiretik</option>
+                                                            <option value="kapsul">Antibiotik</option>
+                                                            <option value="sirup">Antiviral</option>
+                                                            <option value="tablet">Antijamur</option>
+                                                            <option value="kapsul">Antiseptik dan Disinfektan</option>
+                                                            <option value="sirup">Antiparasitik</option>
+                                                            <option value="tablet">Antineoplastik</option>
+                                                            <option value="kapsul">Antiemetik</option>
+                                                            <option value="sirup">Antialergi</option>
+                                                            <option value="tablet">Antikoagulan</option>
+                                                            <option value="kapsul">Antidiabetik</option>
+                                                            <option value="sirup">Antiasma atau Bronkodilator</option>
+                                                            <option value="tablet">Antidepresan</option>
+                                                            <option value="kapsul">Antipsikotik</option>
+                                                            <option value="sirup">Diuretik</option>
+                                                            <option value="tablet">Kontrasepsi</option>
+                                                            <option value="kapsul">Hormon</option>
+                                                            <option value="sirup">Vitamin dan Mineral</option>
+                                                            <option value="tablet">Steroid</option>
+                                                            <option value="kapsul">Imunomodulator</option>
+                                                        </select>
                                                 </div>
                                             </div>
                                             <div class="mb-3 ml-2 row">

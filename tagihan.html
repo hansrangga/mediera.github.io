@@ -20,7 +20,7 @@
 
             <!-- Sidebar -->
             <ul class="navbar-nav bg-sidebar-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
+            
                 <!-- Brand -->
                 <a href="" class="sidebar-brand d-flex align-items-center justify-content-center">
                     <div class="sidebar-brand-icon">
@@ -28,10 +28,10 @@
                     </div>
                     <div class="sidebar-brand-text m-3">Mediera</div>
                 </a>
-
+            
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
-
+            
                 <!-- Dashboard -->
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">
@@ -39,31 +39,29 @@
                         <span> Dashboard</span>
                     </a>
                 </li>
-
+            
                 <!-- Pasien -->
                 <li class="nav-item">
-                    <a href="pasien.html" class="nav-link">
-                        <i class="fas fa-user-edit"></i>
+                    <a href="#pasienMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-user"></i>
                         <span> Pasien</span>
                     </a>
+                    <ul class="collapse list-unstyled" id="pasienMenu">
+                        <li>
+                            <a href="pendaftaran-pasien.html" class="collapse-item nav-link">
+                                <i class="fas fa-user-edit"></i>
+                                <span> Pendaftaran Pasien</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="daftar-pasien.html" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span> Daftar Pasien</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-
-                <!-- Lab -->
-                <li class="nav-item">
-                    <a href="lab.html" class="nav-link">
-                        <i class="fas fa-flask"></i>
-                        <span> Lab</span>
-                    </a>
-                </li>
-
-                <!-- Obat -->
-                <li class="nav-item">
-                    <a href="obat.html" class="nav-link">
-                        <i class="fas fa-prescription-bottle-alt"></i>
-                        <span> Obat</span>
-                    </a>
-                </li>
-
+            
                 <!-- Rekam Medis -->
                 <li class="nav-item active">
                     <a href="rekammedis.html" class="nav-link">
@@ -71,13 +69,41 @@
                         <span> Rekam Medis</span>
                     </a>
                 </li>
-
-                <!-- Laporan -->
-                <li class="nav-item">
-                    <a href="laporan.html" class="nav-link ">
-                        <i class="fas fa-file-signature"></i>
-                        <span> Laporan</span>
+            
+                <!-- Lab -->
+                <!-- <li class="nav-item">
+                    <a href="lab.html" class="nav-link">
+                        <i class="fas fa-flask"></i>
+                        <span> Tindakan Lab</span>
                     </a>
+                </li> -->
+            
+                <!-- Obat -->
+                <li class="nav-item">
+                    <a href="#obatMenu" class="nav-link dropdown-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        <span> Obat</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="obatMenu">
+                        <li>
+                            <a href="tambah-obat.html" class="collapse-item nav-link">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                                <span> Tambah Obat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="daftar-obat.html" class="nav-link">
+                            <i class="fas fa-book-medical"></i>
+                                <span> Daftar Obat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="obat.html" class="nav-link">
+                            <i class="fas fa-book-medical"></i>
+                                <span> Single Page Obat</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <!-- End of Sidebar -->
@@ -346,11 +372,14 @@
                                         </div>
                                         <div class="row align-items-center">
                                             <div class="col-sm-12">
-                                            <a href="rekammedis.html" class="btn btn-block btn-danger">
+                                                <button type="button" class="btn btn-block btn-warning" data-toggle="modal" data-target="#pembayaran">
+                                                    <i class="fa fa-cash-register"> Pembayaran</i>
+                                                </button>
+                                            <!-- <a href="rekammedis.html" class="btn btn-block btn-warning">
                                                 <span class="icon">
-                                                    <i class="fa fa-arrow-left"> Kembali</i>
+                                                    <i class="fa fa-cash-register"> Pembayaran</i>
                                                 </span>
-                                            </a>
+                                            </a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -358,6 +387,40 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Pembayaran Pop Up Static -->
+                    <div class="modal fade" id="pembayaran" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                        aria-labelledby="pembayaranLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="pembayaranLabel">Pilih Tipe Pembayaran</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Form Tipe Pembayaran -->
+                                    <form id="paymentForm">
+                                        <div class="form-group">
+                                            <label for="paymentType">Tipe Pembayaran:</label>
+                                            <select class="form-control" id="paymentType" name="paymentType">
+                                                <option value="cash">Tunai</option>
+                                                <option value="transferBank">Transfer Bank</option>
+                                                <option value="dana">Dana</option>
+                                                <option value="gopay">Gopay</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" form="paymentForm" class="btn btn-success" data-dismiss="modal">Cetak Struk</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Pop Up Pembayaran -->
+
                 </div>
             </div>
         </div>

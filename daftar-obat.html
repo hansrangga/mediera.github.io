@@ -9,7 +9,10 @@
     <!-- Custom Style CSS-->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Fontawesom CSS-->
+    <!-- DataTables CSS -->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Fontawesome CSS-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Font Nunito CSS -->
@@ -75,12 +78,12 @@
             </li>
         
             <!-- Lab -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="lab.html" class="nav-link">
                     <i class="fas fa-flask"></i>
                     <span> Tindakan Lab</span>
                 </a>
-            </li>
+            </li> -->
         
             <!-- Obat -->
             <li class="nav-item">
@@ -163,194 +166,144 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Data Pasien</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Nama Obat</th>
-                                                    <th>Jenis</th>
-                                                    <th>Dosis</th>
-                                                    <th>Stok</th>
-                                                    <th>Harga</th>
-                                                    <th>Tanggal Input</th>
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>01</td>
-                                                    <td>Paracetamol</td>
-                                                    <td>Sirup</td>
-                                                    <td>60 ml</td>
-                                                    <td>20</td>
-                                                    <td>Rp 15.000</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>02</td>
-                                                    <td>Sanmol</td>
-                                                    <td>Sirup</td>
-                                                    <td>120 mg/5ml</td>
-                                                    <td>20</td>
-                                                    <td>Rp 15.000</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>03</td>
-                                                    <td>Combantrin</td>
-                                                    <td>Tablet</td>
-                                                    <td>500 mg</td>
-                                                    <td>20</td>
-                                                    <td>Rp.21.000</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>04</td>
-                                                    <td>Cerebrovit</td>
-                                                    <td>Kapsul</td>
-                                                    <td>200 mg</td>
-                                                    <td>20</td>
-                                                    <td>Rp 20.000</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>05</td>
-                                                    <td>Enervon-C</td>
-                                                    <td>500 mg</td>
-                                                    <td>Tablet</td>
-                                                    <td>50</td>
-                                                    <td>Rp 45.000</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>06</td>
-                                                    <td>Decolgen</td>
-                                                    <td>Tablet</td>
-                                                    <td>100 mg</td>
-                                                    <td>20</td>
-                                                    <td>Rp 2.500</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>07</td>
-                                                    <td>Paramex</td>
-                                                    <td>Tablet</td>
-                                                    <td>300 mg</td>
-                                                    <td>20</td>
-                                                    <td>Rp 3.500</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>08</td>
-                                                    <td>Paramex</td>
-                                                    <td>Tablet</td>
-                                                    <td>300 mg</td>
-                                                    <td>20</td>
-                                                    <td>Rp 3.500</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>09</td>
-                                                    <td>Paramex</td>
-                                                    <td>Tablet</td>
-                                                    <td>300 mg</td>
-                                                    <td>20</td>
-                                                    <td>Rp 3.500</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>Paramex</td>
-                                                    <td>Tablet</td>
-                                                    <td>300 mg</td>
-                                                    <td>20</td>
-                                                    <td>Rp 3.500</td>
-                                                    <td>12 Juli 2022</td>
-                                                    <td>
-                                                        <a href="edit-obat.html" class="btn btn-sm btn-circle btn-primary">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                        <a href="" class="btn btn-sm btn-circle btn-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <table class="table table-responsive table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama Obat</th>
+                                                <th>Stok Obat</th>
+                                                <th>Jenis Obat</th>
+                                                <th>Dosis Obat</th>
+                                                <th>Kategori Obat</th>
+                                                <th>Harga</th>
+                                                <th>Tanggal Kadaluarsa</th>
+                                                <th>Tanggal Didaftarkan</th>
+                                                <th>Tanggal Diperbarui</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>04</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>05</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>06</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>07</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>08</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>09</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Paracetamol</td>
+                                                <td>20</td>
+                                                <td>Sirup</td>
+                                                <td>60 ml</td>
+                                                <td>Antibiotik</td>
+                                                <td>Rp 15.000</td>
+                                                <td>12 Juli 2024</td>
+                                                <td>10 Juli 2023</td>
+                                                <td>11 Juli 2023</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

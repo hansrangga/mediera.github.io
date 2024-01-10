@@ -71,12 +71,12 @@
                 </li>
             
                 <!-- Lab -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="lab.html" class="nav-link">
                         <i class="fas fa-flask"></i>
                         <span> Tindakan Lab</span>
                     </a>
-                </li>
+                </li> -->
             
                 <!-- Obat -->
                 <li class="nav-item">
@@ -87,13 +87,13 @@
                     <ul class="collapse list-unstyled" id="obatMenu">
                         <li>
                             <a href="tambah-obat.html" class="collapse-item nav-link">
-                                <i class="fas fa-user-edit"></i>
+                                <i class="fas fa-prescription-bottle-alts"></i>
                                 <span> Tambah Obat</span>
                             </a>
                         </li>
                         <li>
                             <a href="daftar-obat.html" class="nav-link">
-                                <i class="fas fa-address-book"></i>
+                                <i class="fas fa-book-medical"></i>
                                 <span> Daftar Obat</span>
                             </a>
                         </li>
@@ -160,11 +160,17 @@
                                         <form action="" class="user" method="post">
                                             <div class="form-group">
                                                 <div class="mb-3 ml-2 row">
+                                                    <label for="nik" class="col-sm-2 col-form-label">NIK</label>
+                                                    <div class="col-sm mb-3 mb-sm-0">
+                                                        <input type="text" class="form-control" name="nik" placeholder="Nomor Identitas Penduduk">
+                                                    </div>
+                                                    <button type="check" class="btn btn-secondary">Cek NIK</button>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
                                                     <label for="namaLengkap" class="col-sm-2 col-form-label">Nama Lengkap</label>
                                                     <div class="col-sm mb-3 mb-sm-0">
                                                         <input type="text" class="form-control" name="namalengkap" placeholder="Nama Lengkap">
                                                     </div>
-                                                    <button type="check" class="btn btn-secondary">Cek Nama</button>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
                                                     <label for="umur" class="col-sm-2 col-form-label">Umur</label>
@@ -185,14 +191,33 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="tglLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                                <div class="col-sm-10 mb-3 mb-sm-0">
+                                                    <input type="date" class="form-control" name="tglLahir" placeholder="mm/dd/yyyy">
+                                                </div>
+                                            </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="telpnumber" class="col-sm-2 col-form-label">Nomor Hp</label>
+                                                    <label for="jenisKelamin" class="col-sm-2 col-form-label">Status Perkawinan</label>
+                                                    <div class="col-sm-10 mt-1 mb-2 mb-sm-0">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                            <label class="form-check-label" for="inlineRadio1">Belum Kawin</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">Sudah Kawin</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ml-2 row">
+                                                    <label for="telpnumber" class="col-sm-2 col-form-label">Nomor Telpon</label>
                                                     <div class="col-sm-10 mb-3 mb-sm-0">
                                                         <input type="text" class="form-control" name="telpnumber" placeholder="Nomor Telepon">
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 ml-2 row">
-                                                    <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+                                                    <label for="alamat" class="col-sm-2 col-form-label">Alamat Rumah</label>
                                                     <div class="col-sm-10 mb-3 mb-sm-0">
                                                         <textarea class="form-control" name="alamat" rows="3" placeholder="Alamat Lengkap"></textarea>
                                                     </div>
@@ -201,7 +226,7 @@
                                             
                                             <div class="form-group row mt-4 justify-content-center">
                                                 <div class="col-lg-2 col-md-3 col-sm-6">
-                                                    <button type="submit" class="btn btn-success btn-block">Submit</button>
+                                                    <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#nomorAntrian">Submit</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -210,6 +235,28 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Nomor Antrian Pop Up Static -->
+                    <div class="modal fade" id="nomorAntrian" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="nomorAntrianLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="nomorAntrianLabel">Nomor Antrian</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p style="font-weight: bold; font-size: 34px; color: brown; text-align: center;">21</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Pop Up Nomor Antrian -->
+
                 </div>
             </div>
         </div>

@@ -75,12 +75,12 @@
             </li>
 
             <!-- Lab -->
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a href="lab.html" class="nav-link">
                     <i class="fas fa-flask"></i>
                     <span> Tindakan Lab</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Obat -->
             <li class="nav-item">
@@ -243,8 +243,11 @@
                     </div>
 
                     <div class="row mt-4">
+                        
                         <!-- List Table Data -->
                         <div class="col-xl-5 col-lg-5">
+
+                            <!-- Identitas Pasien -->
                             <div class="card shadow mb-4">
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -278,45 +281,53 @@
                                     </form>
                                 </div>
                             </div>
+                        
+                            <!-- Data Rekam Medis -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Data Rekam Medis</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="" class="user" method="post">
+                                        <div class="form-group">
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="pemeriksa" class="col-sm-3 col-form-label">Dokter Pemeriksa</label>
+                                                <div class="col-sm-9 mt-2 mb-1 mb-sm-0">
+                                                    <input type="text" class="form-control" name="pemeriksa"
+                                                        placeholder="Dr. Muhammad Ifan Fadhil" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="umur" class="col-sm-3 col-form-label">Gejala</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <textarea class="form-control" name="gejala" rows="3" placeholder="Demam" readonly></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="jenisKelamin" class="col-sm-3 col-form-label">Anamnesis</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <textarea class="form-control" name="anamnesis" rows="3" placeholder="Amamnesis" readonly></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="pemeriksa" class="col-sm-3 col-form-label">Pemeriksaan Fisik</label>
+                                                <div class="col-sm-9 mt-2 mb-1 mb-sm-0">
+                                                    <textarea class="form-control" name="pfisik" rows="3" placeholder="Badan Panas" readonly></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="umur" class="col-sm-3 col-form-label">Diagnosis</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Demam" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
 
-                                                <!-- List Table Data -->
-                                                <div class="col-xl-5 col-lg-5">
-                                                    <div class="card shadow mb-4">
-                                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                                            <h6 class="m-0 font-weight-bold text-primary">Identitas Pasien</h6>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <form action="" class="user" method="post">
-                                                                <div class="form-group">
-                                                                    <div class="mb-3 ml-2 row">
-                                                                        <label for="namalengkap" class="col-sm-3 col-form-label">Nama</label>
-                                                                        <div class="col-sm-9 mb-3 mb-sm-0">
-                                                                            <input type="text" class="form-control" name="namalengkap" placeholder="Dian Pratiwi"
-                                                                                readonly>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="mb-3 ml-2 row">
-                                                                        <label for="umur" class="col-sm-3 col-form-label">Umur</label>
-                                                                        <div class="col-sm-9 mb-3 mb-sm-0">
-                                                                            <input type="text" class="form-control" name="umur" placeholder="22" readonly>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="mb-3 ml-2 row">
-                                                                        <label for="jenisKelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                                                                        <div class="col-sm-9 mb-3 mb-sm-0">
-                                                                            <input type="text" class="form-control" name="jenisKelamin" placeholder="Laki-Laki"
-                                                                                readonly>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                        <!-- Tambah Rekam Medis -->
+                        <!-- Tindakan Lab -->
                         <div class="col-lg-7">
                             <div class="card shadow mb-4">
                                 <div
@@ -327,68 +338,73 @@
                                     <form action="" class="user" method="post">
                                         <div class="form-group">
                                             <div class="mb-3 ml-2 row">
-                                                <label for="pemeriksa" class="col-sm-3 col-form-label">Dokter Pemeriksa</label>
+                                                <label for="pemeriksa" class="col-sm-3 col-form-label">Pemeriksaan Lab</label>
                                                 <div class="col-sm-9 mb-3 mb-sm-0">
-                                                    <select class="form-control col-sm-12 mb-3 mb-sm-0" id="pemeriksa">
-                                                        <option value="#" selected>Bidan Hj.Siti Maryam</option>
-                                                        <option value="#">Dr. Muhammad Ifan Fadhil</option>
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Pemeriksaan Lab">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="gejala" class="col-sm-3 col-form-label">Tanggal Pemeriksaan</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="date" class="form-control" name="tglLahir" placeholder="mm/dd/yyyy">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="umur" class="col-sm-3 col-form-label">Hasil Pemeriksaan</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Hasil Pemeriksaan">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="pfisik" class="col-sm-3 col-form-label">Catatan Tambahan</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <textarea class="form-control" name="pfisik" rows="3" placeholder="Catatan Tambahan"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="diagnosis" class="col-sm-3 col-form-label">Harga Pemeriksaan</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Harga Pemeriksaan">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="resep" class="col-sm-3 col-form-label">Resep</label>
+                                                <div class="col-sm-7 mb-3 mb-sm-0">
+                                                    <select class="form-control col-sm-12 mb-3 mb-sm-0" id="resep">
+                                                        <option selected>Resep Obat</option>
+                                                        <option value="sirup">Sirup</option>
+                                                        <option value="tablet">Tablet</option>
+                                                        <option value="kapsul">Kapsul</option>
                                                     </select>
                                                 </div>
+                                                <button type="check" class="btn btn-success">Tambahkan</button>
                                             </div>
                                             <div class="mb-3 ml-2 row">
-                                                <label for="gejala" class="col-sm-3 col-form-label">Gejala</label>
-                                                <div class="col-sm-9 mb-3 mb-sm-0">
-                                                    <textarea class="form-control" name="gejala" rows="3"
-                                                        placeholder="Gejala"></textarea>
+                                                <div class="col-sm-5 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Nama Obat" readonly>
                                                 </div>
-                                            </div>
-                                            <div class="mb-3 ml-2 row">
-                                                <label for="umur" class="col-sm-3 col-form-label">Anamnesis</label>
-                                                <div class="col-sm-9 mb-3 mb-sm-0">
-                                                    <textarea class="form-control" name="anamnesis" rows="3"
-                                                        placeholder="Amamnesis"></textarea>
+                                                <div class="col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Aturan Pakai">
                                                 </div>
-                                            </div>
-                                            <div class="mb-3 ml-2 row">
-                                                <label for="pfisik" class="col-sm-3 col-form-label">Pemeriksaan Fisik</label>
-                                                <div class="col-sm-9 mb-3 mb-sm-0">
-                                                    <textarea class="form-control" name="pfisik" rows="3"
-                                                        placeholder="Pemeriksaan Fisik"></textarea>
+                                                <div class="col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Jumlah Obat">
                                                 </div>
-                                            </div>
-                                            <div class="mb-3 ml-2 row">
-                                                <label for="diagnosis" class="col-sm-3 col-form-label">Diagnosis</label>
-                                                <div class="col-sm-9 mb-3 mb-sm-0">
-                                                    <input type="text" class="form-control" name="diagnosis"
-                                                        placeholder="Diagnosis">
-                                                </div>
-                                            </div>
-                                            <div class="mb-3 ml-2 row">
-                                                <label for="plab" class="col-sm-3 col-form-label">Pemeriksaan Lab</label>
-                                                <div class="col-sm-9 mt-1 mb-2 mb-sm-0">
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                        <label class="form-check-label"
-                                                            for="inlineRadio1">Diperlukan</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio2">Tidak Perlu</label>
-                                                    </div>
-                                                </div>
+                                                <button type="button" class="btn btn-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
                                             </div>
                                             <!-- <div class="mb-3 ml-2 row">
-                                                    <label for="resep" class="col-sm-3 col-form-label">Resep</label>
-                                                    <div class="col-sm-9 mb-3 mb-sm-0">
-                                                        <select class="form-control col-sm-12 mb-3 mb-sm-0" id="resep">
-                                                            <option value="sirup" selected>Sirup</option>
-                                                            <option value="tablet">Tablet</option>
-                                                            <option value="kapsul">Kapsul</option>
-                                                        </select>
-                                                    </div>
-                                                </div> -->
+                                                <label for="diagnosis" class="col-sm-3 col-form-label">Aturan Pakai</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Aturan Pakai">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 ml-2 row">
+                                                <label for="diagnosis" class="col-sm-3 col-form-label">Jumlah</label>
+                                                <div class="col-sm-9 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="diagnosis" placeholder="Jumlah Obat">
+                                                </div>
+                                            </div> -->
                                         </div>
                                         <div class="form-group row mt-4 justify-content-center">
                                             <div class="col-sm-4">
