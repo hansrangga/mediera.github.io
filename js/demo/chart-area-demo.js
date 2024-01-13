@@ -1,118 +1,267 @@
-// Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
-function number_format(number, decimals, dec_point, thousands_sep) {
-  // *     example: number_format(1234.56, 2, ',', ' ');
-  // *     return: '1 234,56'
-  number = (number + '').replace(',', '').replace(' ', '');
-  var n = !isFinite(+number) ? 0 : +number,
-    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
-    sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
-    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
-    s = '',
-    toFixedFix = function(n, prec) {
-      var k = Math.pow(10, prec);
-      return '' + Math.round(n * k) / k;
-    };
-  // Fix for IE parseFloat(0.55).toFixed(0) = 0;
-  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
-  if (s[0].length > 3) {
-    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
-  }
-  if ((s[1] || '').length < prec) {
-    s[1] = s[1] || '';
-    s[1] += new Array(prec - s[1].length + 1).join('0');
-  }
-  return s.join(dec);
+var bulan = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun'];
+var dataPendapatan = [12000, 15000, 18000, 20000, 22000, 124000];
+var dataPengeluaran = [7000, 8000, 7500, 9000, 8500, 9500];
+var jumlahPasien = [50, 60, 70, 80, 90, 100];
+var umur = [30, 32, 28, 31, 29, 33];
+var rataRataUmur = [30, 32, 28, 31, 29, 33];
+var rataRataKunjungan = [200, 180, 220, 210, 230, 240];
+var jumlahLayanan = 5;
+var kepuasanPasien = [80, 85, 75, 90, 88, 92];
+var jumlahTenagaKerja = 10;
+var jumlahRujukan = [20, 25, 22, 28, 26, 30];
+var waktuJamKerja = [8, 8, 8, 8, 8, 8]; // Assuming a constant value
+var waktuSibuk = [2, 3, 2.5, 3, 3.5, 4]; // Example: peak hours per day
+
+function formatRupiah(value) {
+  return 'Rp ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-// Area Chart Example
-var ctx = document.getElementById("myAreaChart");
-var myLineChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    datasets: [{
-      label: "Earnings",
-      lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
-      borderColor: "rgba(78, 115, 223, 1)",
-      pointRadius: 3,
-      pointBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointBorderColor: "rgba(78, 115, 223, 1)",
-      pointHoverRadius: 3,
-      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-      pointHitRadius: 10,
-      pointBorderWidth: 2,
-      data: [0, 51, 12, 35, 45, 25, 36, 47, 16, 46, 71, 24],
-    }],
-  },
-  options: {
-    maintainAspectRatio: false,
+function createChart(chartId, chartType, chartData, chartOptions) {
+    var canvas = document.getElementById(chartId);
+    if (canvas) { // Cek jika elemen canvas ada
+      var ctx = canvas.getContext('2d');
+      return new Chart(ctx, {
+          type: chartType,
+          data: chartData,
+          options: chartOptions
+      });
+    }
+}
+
+var defaultChartOptions = {
     layout: {
-      padding: {
-        left: 10,
-        right: 25,
-        top: 25,
-        bottom: 0
-      }
+        padding: {
+            left: 10
+        }
     },
+    tooltips: {},
     scales: {
-      xAxes: [{
-        time: {
-          unit: 'date'
-        },
-        gridLines: {
-          display: false,
-          drawBorder: false
-        },
-        ticks: {
-          maxTicksLimit: 7
+        yAxes: [{
+            ticks: {}
+        }]
+    }
+};
+
+
+var chartOptions = {
+    layout: {
+        padding: {
+            left: 10
         }
-      }],
-      yAxes: [{
-        ticks: {
-          maxTicksLimit: 5,
-          padding: 10,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return '' + number_format(value);
-          }
-        },
-        gridLines: {
-          color: "rgb(234, 236, 244)",
-          zeroLineColor: "rgb(234, 236, 244)",
-          drawBorder: false,
-          borderDash: [2],
-          zeroLineBorderDash: [2]
-        }
-      }],
-    },
-    legend: {
-      display: false
     },
     tooltips: {
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      titleMarginBottom: 10,
-      titleFontColor: '#6e707e',
-      titleFontSize: 14,
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      intersect: false,
-      mode: 'index',
-      caretPadding: 10,
-      callbacks: {
-        label: function(tooltipItem, chart) {
-          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+        callbacks: {
+            label: function(tooltipItem) {
+                return formatRupiah(tooltipItem.yLabel);
+            }
         }
-      }
+    },
+    scales: {
+        yAxes: [{
+            ticks: {
+                callback: function(value) {
+                    return formatRupiah(value);
+                }
+            }
+        }]
     }
-  }
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Grafik Total Pendapatan per Bulan
+    createChart('totalRevenueChart', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Total Pendapatan',
+            data: dataPendapatan,
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    }, chartOptions);
+
+    // Grafik Total Pengeluaran per Bulan
+    createChart('expensesChart', 'line', {
+        labels: bulan,
+        datasets: [{
+            label: 'Pengeluaran',
+            data: dataPengeluaran,
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }]
+    }, chartOptions);
+
+    // Grafik Pendapatan Kotor
+    createChart('grossIncomeChart', 'line', {
+        labels: bulan,
+        datasets: [{
+            label: 'Pendapatan Kotor',
+            data: dataPendapatan,
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    }, chartOptions);
+
+    // Grafik Pendapatan Bersih
+    createChart('netIncomeChart', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Pendapatan Bersih',
+            data: dataPendapatan,
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    }, chartOptions);
+
+    createChart('totalPatient', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Jumlah Pasien',
+            data: jumlahPasien,
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('averageAgePatient', 'doughnut', {
+        labels: [
+            'Anak-anak',
+            'Remaja',
+            'Dewasa',
+            'Lansia'
+          ],
+        datasets: [{
+            label: 'Rata-rata Umur Pasien',
+            data: rataRataUmur,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('averageVisitPatient', 'doughnut', {
+        labels: bulan,
+        datasets: [{
+            label: 'Rata-rata Kunjungan Pasien',
+            data: rataRataKunjungan,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('totalService', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Jumlah Layanan',
+            data: Array(bulan.length).fill(jumlahLayanan),
+            backgroundColor: 'rgba(255, 159, 64, 0.5)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('patientSatisfaction', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Kepuasan Pasien',
+            data: kepuasanPasien,
+            backgroundColor: 'rgba(255, 159, 64, 0.5)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('totalWorker', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Jumlah Tenaga Kerja',
+            data: Array(bulan.length).fill(jumlahTenagaKerja),
+            backgroundColor: 'rgba(255, 159, 64, 0.5)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('totalReferral', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Jumlah Rujukan',
+            data: jumlahRujukan,
+            backgroundColor: 'rgba(255, 159, 64, 0.5)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('totalWorktime', 'bar', {
+        labels: bulan,
+        datasets: [{
+            label: 'Jumlah Jam Kerja',
+            data: waktuJamKerja,
+            backgroundColor: 'rgba(255, 159, 64, 0.5)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
+
+    createChart('busyHours', 'doughnut', {
+        labels: bulan,
+        datasets: [{
+            label: 'Waktu Ramai Kunjungan',
+            data: waktuSibuk,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    }, defaultChartOptions);
 });
